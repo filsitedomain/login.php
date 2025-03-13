@@ -1,0 +1,174 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Centered container */
+.container {
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Headings */
+h2 {
+    color: #333;
+    text-align: center;
+    animation: slideDown 1s ease-in-out;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.3s ease-in-out;
+}
+
+button.approve {
+    background-color: #28a745;
+    color: white;
+}
+
+button.reject {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+    }
+    input[type="text"], button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    a {
+        color: #007BFF;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="container">
+    <h2>Edit Employee Details</h2>
+    <form action="update_employee.php" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" value="allan santiago">
+        
+        <label>Position:</label>
+        <input type="text" name="position" value="technical">
+        
+        <label>Department:</label>
+        <input type="text" name="department" value="arikina">
+        
+        <label>Contact:</label>
+        <input type="text" name="contact" value="111111">
+        
+        <button type="submit">Update Employee</button>
+    </form>
+    <a href="view_employees.php">Back to Employee List</a>
+</div>
